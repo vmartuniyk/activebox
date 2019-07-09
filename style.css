@@ -308,6 +308,13 @@ p {
     overflow: hidden;
     background-color: #53354a;
 }
+.reviews__slider {
+    height: 500px;
+    overflow: hidden;
+}
+.reviews__slider.slick-initialized {
+    height: auto;
+}
 .reviews__item{
     display: flex;
     flex-wrap: wrap;
@@ -347,6 +354,39 @@ p {
     color: #fff;
     font-weight: bold;
     text-transform: uppercase;
+}
+.slick-dots {
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    padding: 10px;
+    list-style: none;
+    width: 50%;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    z-index: 2;
+}
+.slick-dots li {
+    margin: 0 5px;
+}
+.slick-dots button {
+    width: 15px;
+    height: 15px;
+    padding: 0;
+    background: #fff;
+    border-radius: 50%;
+    border: 0;
+    opacity: .5;
+    cursor: pointer;
+    font-size: 0;
+    color: transparent;
+}
+.slick-dots .slick-active button {
+    opacity: 1;
+}
+.slick-dots button:focus {
+    outline: 0;
 }
 
 /*Download*/
@@ -470,7 +510,21 @@ p {
     /*Nav */
     .nav {
         display: none;
+        flex-direction: column;
+        width: 100%;
+        text-align: right;
+        background-color: #2e324c;
+        position: absolute;
+        right: 0;
+        top: 100%;
     }
+    .nav.show {
+        display: flex;
+    }
+    .nav__link {
+        padding: 9px 15px;
+    }
+    
     
     .burger {
         display: block;
