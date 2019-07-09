@@ -44,6 +44,18 @@ p {
     border-bottom: 1px solid #505268;
     padding: 35px 0;
 }
+
+.header.fixed {
+    position: fixed;
+    height: auto;
+    background-color: #2e324c;
+}
+
+.header.fixed .header__inner {
+    padding-bottom: 15px;
+    padding-top: 15px;
+    border-bottom: 0;
+}
 /* Nav ======== */
 .nav {
     display: flex;
